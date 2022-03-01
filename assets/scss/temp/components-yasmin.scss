@@ -1,0 +1,1179 @@
+.modulo-5 {
+    margin-top: 9rem;
+
+    @include res-sm {
+        margin-top: 7.375rem;
+        margin-bottom: -4.5rem;
+    }
+
+    .order-1,
+    .order-2 {
+        @include res-sm {
+            padding: 0 1rem;
+        }
+    }
+
+    .titulo {
+        @include titulo-swashington;
+        margin-bottom: 3.25rem;
+
+        @include res-sm {
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    .box-contato {
+        padding: 0 3rem;
+
+        @include res-lg {
+            margin-top: 2rem;
+        }
+
+        @include res-sm {
+            margin: 0;
+            padding: 2.5rem 0 0;
+        }
+
+        .title {
+            font-family: "opensans";
+            font-size: 1rem;
+            font-weight: 600;
+            line-height: 1.5rem;
+            color: #000;
+        }
+
+        .box {
+            margin-bottom: 2rem;
+
+            @include res-sm {
+                margin-bottom: 1rem;
+            }
+        }
+
+        a {
+            text-decoration: none;
+        }
+    }
+
+    form {
+        margin: 0 auto;
+        position: relative;
+        border-radius: 1.5rem;
+
+        input,
+        textarea {
+            margin-bottom: 1rem;
+            border: 1px solid #000000b3;
+            resize: none;
+        }
+
+        .btn {
+            @include btn;
+            display: inline-flex;
+            padding: 1rem 1.5rem;
+
+            @include res-sm {
+                padding: 0.6875rem 1.5rem 0.625rem;
+            }
+        }
+    }
+
+    @include res-sm {
+        .box-contato .description {
+            line-height: 1.25rem;
+        }
+    }
+}
+
+.modulo-6 {
+    margin-top: 9rem;
+
+    .post-info {
+        margin-bottom: 2rem;
+
+        @include res-sm {
+            margin: 1rem 0;
+        }
+
+        .meta {
+            font-size: 0.875rem;
+            line-height: 1.5rem;
+
+            .autor {
+                color: #e1b56c;
+            }
+        }
+
+        .titulo-post {
+            height: 50px;
+            @include titulo-open-bold;
+        }
+    }
+
+    .post-description {
+        margin-top: 2rem;
+        line-height: 1.5rem;
+
+        @include res-sm {
+            margin-top: 1rem;
+            line-height: 1.25rem;
+            padding: 0 1rem;
+        }
+    }
+}
+
+.modulo-7 {
+    margin-top: 3rem;
+
+    .titulo {
+        margin-bottom: 2rem;
+        @include titulo-open-bold;
+    }
+
+    .slick-posts {
+        .slick-list {
+            .slick-track {
+                .slick-slide {
+                    padding-right: 1.5rem;
+                }
+            }
+        }
+    }
+
+    .col-lg-4 img {
+        @include res-min-1366 {
+            width: 100%;
+        }
+    }
+
+    .post {
+        @include res-sm {
+            max-width: 252px;
+        }
+
+        a {
+            text-decoration: none;
+
+            .meta {
+                font-size: 0.875rem;
+                color: #000000b3;
+                line-height: 1.5rem;
+    
+                .autor {
+                    color: #e1b56c;
+                }
+            }
+    
+            .titulo-post {
+                @include titulo-open-bold;
+                font-size: 1.25rem;
+                height: 50px;
+    
+                @include res-sm {
+                    font-size: 1.125rem;
+                }
+            }
+    
+            .post-resumo {
+                width: 80%;
+                color: #000000b3;
+                line-height: 1.5rem;
+                font-size: 1rem;
+    
+                @include res-min-1366 {
+                    width: 100%;
+                }
+    
+                @include res-sm {
+                    width: 100%;
+                    font-size: 0.875rem;
+                }
+            }
+        }
+    }
+}
+
+.modulo-8 {
+    margin-top: 9rem;
+
+    @include res-sm {
+        margin-top: 7rem;
+    }
+
+    .quem-somos {
+        @include res-xl {
+            padding-left: 2rem;
+        }
+
+        @include res-sm {
+            padding: 0 1rem;
+        }
+
+        .title {
+            @include titulo-swashington;
+            margin-bottom: 1rem;
+
+            @include res-sm {
+                margin-top: 2rem;
+            }
+        }
+
+        .description {
+            line-height: 1.5rem;
+
+            @include res-sm {
+                line-height: 1.25rem;
+            }
+        }
+    }
+}
+
+.modulo-9 {
+    margin-top: 7rem;
+    background: #fed224;
+
+    @include res-sm {
+        margin-top: 2.5rem;
+    }
+
+    .bg {
+        background-color: #fed224;
+        height: 100%;
+    }
+
+    .box {
+        width: 564px;
+        padding-top: 5rem;
+
+        @include res-min-1366 {
+            width: auto;
+            padding-top: 4rem;
+        }
+
+        @include res-lg {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        @include res-sm {
+            padding: 1.5rem 1rem;
+        }
+
+        .titulo {
+            @include titulo-swashington;
+        }
+
+        .conteudo {
+            @media screen and (min-width: 1400px) {
+                width: 70%;
+            }
+
+            p {
+                line-height: 1.5rem;
+
+                @include res-sm {
+                    line-height: 1.25rem;
+                }
+            }
+        }
+    }
+
+    .box-img {
+        img {
+            @include res-sm {
+                height: auto;
+                max-height: unset;
+                width: 100%;
+            }
+        }
+    }
+}
+
+.modulo-10 {
+    padding: 7rem 0;
+    overflow: hidden;
+
+    @include res-sm {
+        padding: 4rem 0 2rem;
+    }
+
+    .box {
+        width: 521px;
+        height: 596px;
+        background: #ebebeb 0% 0% no-repeat padding-box;
+        opacity: 0.5;
+        z-index: -1;
+        top: 14rem;
+        left: -15rem;
+    }
+
+    .quotes {
+        @include res-xl {
+            padding-left: 2rem;
+        }
+
+        @include res-md {
+            padding: 0;
+        }
+
+        @include res-sm {
+            margin-top: 4rem;
+            margin-bottom: 3rem;
+        }
+
+        .top {
+            top: -5.5rem;
+
+            @include res-lg {
+                width: 60px;
+                top: -4.5rem;
+            }
+
+            @include res-sm {
+                width: 51px;
+                top: -3.5rem;
+            }
+        }
+
+        .bottom {
+            transform: scaleX(-1);
+            bottom: -2rem;
+            right: 2.25rem;
+
+            @include res-lg {
+                width: 60px;
+            }
+
+            @include res-sm {
+                width: 51px;
+                bottom: 0rem;
+                right: 1rem;
+            }
+        }
+
+        .frase {
+            line-height: 1.25rem;
+            color: #000000b3;
+        }
+
+        .responsavel {
+            line-height: 1.5rem;
+            font-weight: 700;
+            color: #000;
+        }
+    }
+}
+
+.modulo-11 {
+    background: #fed224;
+
+    .bg {
+        background-color: #fed224;
+        height: 100%;
+    }
+
+    .box {
+        padding: 6.0625rem 0 6rem;
+
+        @include res-lg {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        @include res-sm {
+            padding: 1.5rem 1rem;
+        }
+
+        .titulo {
+            @include titulo-swashington;
+        }
+
+        .conteudo {
+            @media screen and (min-width: 1400px) {
+                width: 94%;
+            }
+
+            p {
+                line-height: 1.5rem;
+
+                @include res-sm {
+                    line-height: 1.25rem;
+                }
+            }
+        }
+    }
+
+    .box-img {
+        img {
+            @include res-sm {
+                height: auto;
+                max-height: unset;
+                width: 100%;
+            }
+        }
+    }
+}
+
+.modulo-12 {
+    .title {
+        top: 50%;
+        left: 7.6875rem;
+
+        @include res-lg {
+            left: 2.0625rem;
+            margin-right: 15px;
+        }
+
+        @include res-sm {
+            left: 2.0625rem;
+            bottom: 2.5rem;
+        }
+
+        @include res-ios {
+            left: 1rem;
+            bottom: 3rem;
+            top: revert;
+        }
+
+        .titulo {
+            font-family: "swashington";
+            font-size: 4.1875rem;
+            line-height: 4.875rem;
+            color: #e1b56c;
+
+            @include res-lg {
+                font-size: 3.125rem;
+            }
+
+            @include res-sm {
+                font-size: 2.5rem;
+                line-height: 3.125rem;
+            }
+
+            @include res-ios {
+                margin-right: 30px;
+            }
+        }
+    }
+}
+
+.modulo-13 {
+    margin-top: 3.25rem;
+
+    @include res-sm {
+        margin-top: 2.5rem;
+    }
+
+    .produto-01 {
+        @include res-sm {
+            padding: 0 1rem;
+        }
+
+        .titulo {
+            @include titulo-swashington;
+            margin-bottom: 1rem;
+
+            @include res-sm {
+                margin-top: 2rem;
+            }
+        }
+
+        .description {
+            @include res-sm {
+                line-height: 1.25rem;
+            }
+        }
+
+        .btn {
+            @include btn;
+            margin-top: 2rem;
+            padding: 1rem 2rem;
+
+            @include res-sm {
+                font-size: 0.875rem;
+                margin-top: 1rem;
+                padding: 0.6875rem 1.5rem 0.625rem;
+            }
+        }
+    }
+}
+
+.modulo-14 {
+    margin-top: 3rem;
+
+    @include res-sm {
+        margin-top: 2.5rem;
+    }
+
+    .card-container {
+        position: relative;
+        transition: all 800ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
+
+        .img-padrao {
+            position: absolute;
+            visibility: visible;
+            width: 262px;
+            height: auto;
+            opacity: 1;
+            transition: opacity 500ms cubic-bezier(0.420, 0.000, 0.580, 1.000), visibility 600ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
+
+            @include res-min-1366 {
+                width: 307px;
+            }
+
+            @include res-sm {
+                display: none;
+            }
+        }
+
+        .img-hover {
+            width: 100%;
+            height: auto;
+            visibility: hidden;
+            transition: opacity 500ms cubic-bezier(0.420, 0.000, 0.580, 1.000), visibility 600ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
+
+            @include res-sm {
+                display: block;
+            }
+        }
+
+
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 12px;
+            right: 0;
+            background-color: #000000;
+            overflow: hidden;
+            opacity: 0;
+            width: 262px;
+            height: 0;
+            transition: height 400ms cubic-bezier(0.420, 0.000, 0.580, 1.000), opacity 500ms cubic-bezier(0.420, 0.000, 0.580, 1.000), padding 500ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
+            padding: 0 30px;
+
+            @include res-min-1366 {
+                width: 307px;
+            }
+
+            @include res-sm {
+                height: 182px;
+                padding: 16px 30px;
+            }
+
+            .titulo-overlay {
+                font-family: 'opensans-bold';
+                color: #FFFFFF;
+                font-size: 1rem;
+                line-height: 1.5rem;
+                margin-bottom: 1rem;
+            }
+
+            .conteudo {
+                color: #FFFFFF;
+                font-size: 1rem;
+                line-height: 1.375rem;
+                margin-bottom: 1rem;
+            }
+
+            .btn {
+                background-color: transparent;
+                border: 1px solid #FFFFFF;
+                border-radius: 30px;
+                width: 190px;
+                height: 48px;
+                transition: .3s ease;
+                color: #FFFFFF;
+                text-transform: uppercase;
+                display: block;
+                margin: 0 auto;
+
+                &:hover {
+                    background-color: #FFFFFF;
+                    color: #000000;
+                }
+            }
+        }
+
+        &:hover {
+
+            .img-padrao {
+                visibility: hidden;
+                opacity: 0;
+            }
+
+            .img-hover {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .overlay {
+                opacity: 1;
+                height: 162px;
+                padding: 16px 30px;
+            }
+        }
+    }
+
+    .slick-produto-01 {
+        .slick-list {
+            .slick-track {
+                .slick-slide {
+                    &.card-container {
+                        position: relative;
+
+                        img {
+                            display: block;
+                            width: 100%;
+                            height: auto;
+                            padding-right: 1.5rem;
+                        }
+
+                        .overlay {
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            right: 0;
+                            background-color: #000000;
+                            overflow: hidden;
+                            width: 256px;
+                            height: 0;
+                            transition: height 0.4s ease;
+                            padding: 0px 30px;
+                            opacity: 1;
+
+                            @include res-sm {
+                                height: 162px;
+                                padding: 16px 30px;
+                            }
+
+                            .titulo-overlay {
+                                font-family: "opensans-bold";
+                                color: #ffffff;
+                                font-size: 1rem;
+                                line-height: 1.5rem;
+                                margin-bottom: 1rem;
+                            }
+
+                            .btn {
+                                background-color: transparent;
+                                border: 1px solid #ffffff;
+                                border-radius: 30px;
+                                width: 190px;
+                                height: 48px;
+                                transition: 0.3s ease;
+                                color: #ffffff;
+                                text-transform: uppercase;
+
+                                &:hover {
+                                    background-color: #ffffff;
+                                    color: #000000;
+                                }
+                            }
+
+                            @include res-sm {
+                                display: block;
+                            }
+                        }
+
+                        &:hover {
+                            .overlay {
+                                height: 138px;
+                                padding: 16px 30px;
+                            }
+                        }
+                    }
+
+                    // img {
+                    //     padding-right: 1.5rem;
+                    //     width: 256px;
+                    //     height: 384px;
+                    // }
+                }
+            }
+        }
+
+        .slick-dots {
+            bottom: -45px;
+
+            li {
+                button {
+                    &:before {
+                        font-size: 12px;
+                        -webkit-text-stroke-width: 1px;
+                        -webkit-text-stroke-color: #000;
+                        color: transparent;
+                        opacity: 1;
+                    }
+
+                    &:hover {
+                        &::before {
+                            color: #000;
+                            opacity: 0.7;
+                        }
+                    }
+                }
+
+                &.slick-active {
+                    button {
+                        &:before {
+                            color: #000;
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.modulo-15 {
+    margin-top: 7rem;
+    background-color: #fed224;
+
+    @include res-lg {
+        margin-top: 4.8125rem;
+        background-color: #fff;
+    }
+
+    .produto-02 {
+        @include res-sm {
+            padding: 0 1rem;
+        }
+
+        .titulo {
+            @include titulo-swashington;
+            margin-bottom: 1rem;
+
+            @include res-sm {
+                margin-top: 2rem;
+            }
+        }
+
+        .description {
+            @include res-sm {
+                line-height: 1.25rem;
+            }
+        }
+
+        .btn {
+            @include btn;
+            margin-top: 2rem;
+            padding: 1rem 2rem;
+
+            @include res-sm {
+                font-size: 0.875rem;
+                margin-top: 1rem;
+                padding: 0.6875rem 1.5rem 0.625rem;
+            }
+        }
+    }
+}
+
+.modulo-16 {
+    margin-top: 3rem;
+    margin-bottom: -3rem;
+    
+    @include res-sm {
+        margin-bottom: 0;
+    }
+
+    .slick-produto-02 {
+        .slick-slide {
+            &.card-container {
+                position: relative;
+                margin-right: 10px;
+
+                .img-padrao {
+                    position: absolute;
+                    visibility: visible;
+                    width: 256px;
+                    height: auto;
+                    opacity: 1;
+                    transition: opacity 500ms cubic-bezier(0.420, 0.000, 0.580, 1.000), visibility 600ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
+
+                    @include res-min-1366 {
+                        width: 301px;
+                    }
+
+                    @include res-sm {
+                        display: none;
+                    }
+                }
+
+                .img-hover {
+                    width: 256px;
+                    height: auto;
+                    visibility: hidden;
+                    transition: opacity 500ms cubic-bezier(0.420, 0.000, 0.580, 1.000), visibility 600ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
+
+                    @include res-sm {
+                        display: block;
+                        visibility: inherit;
+                    }
+
+                    @include res-min-1366 {
+                        width: 301px;
+                    }
+                }
+
+                .overlay {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    background-color: #000000;
+                    overflow: hidden;
+                    width: 256px;
+                    height: 0;
+                    transition: height 400ms cubic-bezier(0.420, 0.000, 0.580, 1.000), opacity 500ms cubic-bezier(0.420, 0.000, 0.580, 1.000), padding 500ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
+                    padding: 0px 30px;
+
+                    @include res-min-1366 {
+                        width: 301px;
+                    }
+
+                    @include res-lg {
+                        height: 138px;
+                        padding: 16px 30px;
+                    }
+
+                    .titulo-overlay {
+                        font-family: 'opensans-bold';
+                        color: #FFFFFF;
+                        font-size: 1rem;
+                        line-height: 1.5rem;
+                        margin-bottom: 1rem;
+                    }
+
+                    .btn {
+                        background-color: transparent;
+                        border: 1px solid #FFFFFF;
+                        border-radius: 30px;
+                        width: 190px;
+                        height: 48px;
+                        transition: .3s ease;
+                        color: #FFFFFF;
+                        text-transform: uppercase;
+                        display: block;
+                        margin: 0 auto;
+
+                        &:hover {
+                            background-color: #FFFFFF;
+                            color: #000000;
+                        }
+                    }
+
+                    @include res-sm {
+                        display: block;
+                    }
+                }
+
+                &:hover {
+
+                    .img-padrao {
+                        visibility: hidden;
+                        opacity: 0;
+                    }
+
+                    .img-hover {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+
+                    .overlay {
+                        height: 138px;
+                        padding: 16px 30px;
+                    }
+                }
+            }
+        }
+
+        .slick-dots {
+            bottom: -45px;
+
+            li {
+                button {
+                    &:before {
+                        font-size: 12px;
+                        -webkit-text-stroke-width: 1px;
+                        -webkit-text-stroke-color: #000;
+                        color: transparent;
+                        opacity: 1;
+                    }
+
+                    &:hover {
+                        &::before {
+                            color: #000;
+                            opacity: 0.7;
+                        }
+                    }
+                }
+
+                &.slick-active {
+                    button {
+                        &:before {
+                            color: #000;
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+
+        .slick-prev,
+        .slick-next {
+            width: 56px;
+            height: 56px;
+            border: 1px solid #000;
+            border-radius: 50%;
+            transition: all ease 0.3s;
+        }
+
+        .slick-prev {
+            left: -65px;
+
+            &::before {
+                content: url(../img/modulo-2/prev.svg);
+                width: 40px;
+                height: 40px;
+                transition: all ease 0.3s;
+                opacity: 1;
+            }
+
+            &:hover {
+                background-color: #000;
+                transition: all ease 0.3s;
+
+                &::before {
+                    filter: invert(1);
+                    transition: all ease 0.3s;
+                }
+            }
+        }
+
+        .slick-next {
+            right: -45px;
+
+            &::before {
+                content: url(../img/modulo-2/next.svg);
+                width: 40px;
+                height: 40px;
+                transition: all ease 0.3s;
+                opacity: 1;
+            }
+
+            &:hover {
+                background-color: #000;
+                transition: all ease 0.3s;
+
+                &::before {
+                    filter: invert(1);
+                    transition: all ease 0.3s;
+                }
+            }
+        }
+    }
+}
+
+.modulo-17 {
+    margin-top: 9rem;
+
+    @include res-sm {
+        margin-top: 7rem;
+    }
+
+    .image {
+        @include res-min-1366 {
+            padding-right: 20px !important;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    .post-bg {
+        background-color: #f5f5f5;
+        padding: 1rem;
+
+        @include res-sm {
+            padding: 0;
+        }
+    }
+
+    .post {
+        margin: 0 3rem;
+
+        @include res-sm {
+            margin: 0 1rem 1.5rem;
+        }
+
+        .post-info {
+            margin-bottom: 1rem;
+
+            @include res-sm {
+                margin: 1.5rem 0 1rem;
+            }
+
+            .meta {
+                font-size: 0.875rem;
+                line-height: 1.5rem;
+
+                .autor {
+                    color: #e1b56c;
+                }
+            }
+
+            .titulo-post {
+                height: 50px;
+                @include titulo-open-bold;
+            }
+        }
+
+        .description {
+            color: #000;
+
+            .btn {
+                @include btn;
+                margin: 2rem auto 0 auto;
+                padding: 1rem 3rem;
+
+                @include res-sm {
+                    font-size: 0.875rem;
+                    margin-top: 1rem;
+                    padding: 0.6875rem 1.5rem 0.625rem;
+                }
+            }
+        }
+    }
+}
+
+.modulo-20 {
+    .title {
+        top: 40%;
+        left: 7.6875rem;
+
+        @include res-lg {
+            left: 3rem;
+            margin-right: 15px;
+        }
+
+        @include res-sm {
+            top: 11.25rem;
+            left: 0.6875rem;
+        }
+
+        .titulo {
+            font-family: "swashington";
+            font-size: 4.1875rem;
+            line-height: 4.875rem;
+            color: #e1b56c;
+
+            @include res-lg {
+                font-size: 50px;
+            }
+
+            @include res-sm {
+                font-size: 2.5rem;
+                line-height: 3.125rem;
+            }
+        }
+
+        .descricao {
+            color: #fff;
+            font-size: 16px;
+            line-height: 1.5rem;
+
+            @include res-sm {
+                line-height: 1.25rem;
+            }
+        }
+    }
+}
+
+.modulo-21 {
+    .nav {
+        margin: 4.5rem auto 0 auto;
+        border: 1px solid rgb(0, 0, 0, 0.5);
+        border-radius: 27px;
+        width: 50%;
+        padding: 0.5rem;
+
+        @include res-md {
+            width: 80%;
+        }
+
+        @include res-sm {
+            border-radius: 38px;
+            width: 95%;
+        }
+
+        .nav-link {
+            color: #000;
+            font-size: 1rem;
+            line-height: 1.5rem;
+            padding: 0;
+            margin: 5px 20px;
+
+            &.active {
+                color: #e1b56c;
+                border-bottom: 1px solid #e1b56c;
+                transition: all ease 0.2s;
+            }
+
+            @include res-sm {
+                font-size: 0.875rem;
+            }
+        }
+    }
+
+    .img-left:first-child {
+        margin-top: 2.5rem;
+    }
+
+    .img-left,
+    .img-right {
+        margin-top: 5rem;
+
+        @include res-sm {
+            margin-top: 2.5rem;
+        }
+    }
+
+    .title {
+        @include titulo-swashington;
+        font-size: 2.125rem;
+
+        @include res-sm {
+            margin-top: 1rem;
+        }
+    }
+
+    .description {
+        margin: 1.5rem 0 2rem;
+        line-height: 1.5rem;
+
+        @include res-sm {
+            margin: 1rem 0;
+            line-height: 1.25rem;
+        }
+    }
+
+    .img-right {
+        .description {
+            margin: 1.5rem 2rem 2rem 0;
+        }
+    }
+
+    .btn {
+        @include btn;
+        padding: 1rem 2rem;
+        line-height: 1.375rem;
+
+        @include res-sm {
+            font-size: 0.875rem;
+            margin-top: 1rem;
+            padding: 0.6875rem 1.5rem 0.625rem;
+        }
+    }
+}

@@ -1,0 +1,414 @@
+.menu {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+
+    .navbar {
+        .navbar-brand {
+            display: block;
+
+            &.preto {
+                display: none;
+            }
+        }
+
+        .navbar-toggler {
+            position: absolute;
+            right: 20px;
+            transition: all ease .3s;
+            border: none;
+            height: 54px;
+            transition: opacity ease .5s;
+            transition: all ease .5s;
+
+            &:focus {
+                box-shadow: none;
+            }
+
+
+            .navbar-toggler-icon {
+                background-image: url(../img/menu.svg);
+            }
+
+            &.ativo {
+                position: absolute;
+                right: unset;
+            }
+
+        }
+
+        .navbar-collapse {
+            transition: width ease .5s;
+
+            @include res-lg {
+                height: 100vh;
+                position: absolute;
+                background: #FFF;
+                z-index: 1;
+                width: 0;
+                top: 0;
+                right: 0;
+            }
+
+            .navbar-nav {
+
+                @include res-lg {
+                    height: 100vh;
+                }
+
+                .nav-item {
+                    margin-left: 40px;
+
+                    .nav-link {
+                        color: #FFF;
+                        font-size: 1rem;
+
+                        @include res-xl {
+                            font-size: .7rem;
+                        }
+
+                        @include res-lg {
+                            color: #000;
+                            font-size: 1.25rem;
+                            line-height: 1.6875rem;
+                            border-bottom: 1px solid #0000004D;
+                            padding: 1rem 0;
+                            width: 90%;
+                        }
+
+                    }
+
+                    &.dropdown {
+                        .nav-link {
+                            &.dropdown-toggle {
+                                border-bottom: 3px solid transparent;
+                                transition: all ease .3s;
+
+                                @include res-lg {
+                                    border-bottom: 1px solid #0000004D;
+                                    padding-bottom: 1rem;
+                                    width: 90%;
+                                }
+
+                                &::after {
+                                    border: none;
+                                    font-family: "Font Awesome 5 Free";
+                                    content: '\f107';
+                                    font-weight: 900;
+                                    position: relative;
+                                    top: 4px;
+                                }
+
+                                &.show {
+                                    border-bottom: 3px solid #E1B56C;
+                                    transition: all ease .3s;
+
+                                    &::after {
+                                        border: none;
+                                        font-family: "Font Awesome 5 Free";
+                                        content: '\f106';
+                                        font-weight: 900;
+                                        position: relative;
+                                        top: 4px;
+                                    }
+
+                                    @include res-lg {
+                                        border-bottom: none;
+
+                                        &::after {
+                                            margin-left: 60px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .dropdown-menu {
+                            background-color: transparent;
+                            color: #FFF;
+                            border: none;
+
+                            li {
+                                .dropdown-item {
+                                    color: #FFF;
+                                    opacity: .7;
+
+                                    @include res-lg {
+                                        color: #000;
+                                    }
+
+                                    &:hover {
+                                        opacity: 1;
+                                        background-color: transparent;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &.sidenav {
+
+            display: none;
+
+            @include res-lg {
+                display: none;
+            }
+
+            .navbar-toggler {
+                position: fixed;
+                right: 80px;
+                top: 20px;
+                opacity: 1;
+                border: none;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                background-color: black;
+                transition: transform ease-in-out .2s;
+
+                &:focus {
+                    box-shadow: none;
+                }
+
+                &:hover {
+                    .navbar-toggler-icon {
+                        transform: scale(1.1);
+                    }
+                }
+
+
+                .navbar-toggler-icon {
+                    background-image: url(../img/menu.svg);
+                    padding: 7px;
+                }
+
+                &.ativo {
+                    position: fixed;
+                    right: unset;
+                }
+
+            }
+
+            .navbar-collapse {
+                transition: width ease .5s;
+                height: 100vh;
+                position: fixed;
+                background: #FFF;
+                z-index: 1;
+                width: 0;
+                top: 0;
+                right: 0;
+
+                .navbar-nav {
+                    height: 100vh;
+
+                    .nav-item {
+                        margin-left: 40px;
+                        display: flex;
+
+                        &.img {
+                            .nav-link {
+                                border-bottom: none;
+
+                                &:hover {
+                                    border-bottom: none;
+                                }
+                            }
+                        }
+
+                        .nav-link {
+                            color: #000;
+                            font-size: 1.5rem;
+                            line-height: 2.0625rem;
+                            border-bottom: 1px solid transparent;
+                            margin-bottom: 2rem;
+                            display: flex;
+                            transition: border-bottom ease-in-out .1s;
+
+                            &:hover {
+                                border-bottom: 1px solid #E1B56C;
+                            }
+                        }
+
+                        &.dropdown {
+                            flex-direction: column;
+
+                            .nav-link {
+                                border-bottom: none;
+
+                                &:hover {
+                                    border-bottom: none;
+                                }
+
+                                &.dropdown-toggle {
+                                    transition: all ease .3s;
+
+                                    &.show {
+                                        margin-bottom: 0;
+                                    }
+
+                                    &::after {
+                                        border: none;
+                                        font-family: "Font Awesome 5 Free";
+                                        content: '\f107';
+                                        font-weight: 900;
+                                        position: relative;
+                                        top: 4px;
+                                    }
+
+                                    &.show {
+                                        transition: all ease .3s;
+                                        border-bottom: none;
+
+                                        &::after {
+                                            border: none;
+                                            font-family: "Font Awesome 5 Free";
+                                            content: '\f106';
+                                            font-weight: 900;
+                                            position: relative;
+                                            top: 4px;
+                                        }
+
+                                    }
+
+                                    &:hover {
+                                        &::after {
+                                            animation: move-to-bottom .7s infinite;
+
+                                            @keyframes move-to-bottom {
+                                                from {
+                                                    top: 4px;
+                                                }
+
+                                                to {
+                                                    top: 6px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .dropdown-menu {
+                            background-color: transparent;
+
+                            li {
+                                .dropdown-item {
+                                    color: #000;
+                                    font-size: 1.25rem;
+                                    line-height: 1.6875rem;
+                                    padding: .5rem 1rem;
+                                    opacity: 1;
+                                    border-bottom: 1px solid transparent;
+
+                                    &:hover {
+                                        border-bottom: 1px solid #E1B56C;
+                                        background-color: transparent;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    &.ativo {
+        .navbar {
+            width: 100%;
+            height: 100vh;
+            background-color: rgba($color: #000000, $alpha: .5);
+            position: fixed;
+
+            .navbar-brand {
+                @include res-lg {
+                    opacity: 0;
+                }
+            }
+
+            .navbar-toggler {
+                position: absolute;
+                right: 20px;
+                opacity: 1;
+                border: none;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                background-color: #FFF;
+
+                &:focus {
+                    box-shadow: none;
+                }
+
+
+                .navbar-toggler-icon {
+                    background-image: url(../img/menu_close.svg);
+                    width: 24px;
+                    height: 24px;
+                    background-size: auto;
+                }
+
+                &.ativo {
+                    position: absolute;
+                    right: unset;
+                    top: 24px;
+                    width: 38px;
+                    height: 36px;
+                }
+
+            }
+
+            .navbar-collapse {
+
+                @include res-lg {
+                    width: 80vw;
+                }
+            }
+
+            &.sidenav {
+                width: 100%;
+                height: 100vh;
+                background-color: rgba($color: #000000, $alpha: .5);
+                position: fixed;
+
+                .navbar-toggler {
+                    &.ativo {
+                        position: fixed;
+                        right: 33vw;
+                    }
+                }
+
+                .navbar-collapse {
+                    width: 30vw;
+                }
+            }
+        }
+
+
+    }
+
+    &.scroll {
+        .navbar {
+            &.mainnav {
+                display: none;
+            }
+
+            &.sidenav {
+                display: flex;
+
+                @include res-lg {
+                    display: none;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,803 @@
+.modulo-1 {
+    .titulo {
+        margin: 5.25rem 0 1.875rem;
+        @include titulo-swashington;
+
+        @include res-sm {
+            margin: 2.5rem 0 .9375rem;
+        }
+
+        &::after,
+        &::before {
+            content: "";
+            position: absolute;
+            background: #0000004D;
+            width: 450px;
+            height: 1px;
+
+            @include res-xl {
+                width: 340px;
+            }
+
+            @include res-lg {
+                width: 230px;
+            }
+
+            @include res-md {
+                width: 150px;
+            }
+
+            @include res-sm {
+                width: 100px;
+            }
+        }
+
+        &::after {
+            right: 12px;
+        }
+
+        &::before {
+            left: 12px;
+        }
+    }
+
+    .card-container {
+        position: relative;
+        transition: all 800ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
+
+        .img-padrao {
+            position: absolute;
+            // display: block;
+            visibility: visible;
+            // width: 100%;
+            width: 262px;
+            height: auto;
+            opacity: 1;
+            transition: opacity 500ms cubic-bezier(0.420, 0.000, 0.580, 1.000), visibility 600ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
+
+            @include res-min-1366 {
+                width: 307px;
+            }
+
+            @include res-sm {
+                display: none;
+            }
+        }
+
+        .img-hover {
+            // display: none;
+            width: 100%;
+            height: auto;
+            visibility: hidden;
+            transition: opacity 500ms cubic-bezier(0.420, 0.000, 0.580, 1.000), visibility 600ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
+
+            @include res-sm {
+                display: block;
+            }
+        }
+
+
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 12px;
+            right: 0;
+            background-color: #000000;
+            overflow: hidden;
+            opacity: 0;
+            width: 262px;
+            height: 0;
+            transition: height 400ms cubic-bezier(0.420, 0.000, 0.580, 1.000), opacity 500ms cubic-bezier(0.420, 0.000, 0.580, 1.000), padding 500ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
+            padding: 0 30px;
+            opacity: 1;
+
+            @include res-min-1366 {
+                width: 307px;
+            }
+
+            @include res-sm {
+                height: 182px;
+                padding: 16px 30px;
+            }
+
+            .titulo-overlay {
+                font-family: 'opensans-bold';
+                color: #FFFFFF;
+                font-size: 1rem;
+                line-height: 1.5rem;
+                margin-bottom: 1rem;
+            }
+
+            .conteudo {
+                color: #FFFFFF;
+                font-size: 1rem;
+                line-height: 1.375rem;
+                margin-bottom: 1rem;
+            }
+
+            .btn {
+                background-color: transparent;
+                border: 1px solid #FFFFFF;
+                border-radius: 30px;
+                width: 190px;
+                height: 48px;
+                transition: .3s ease;
+                color: #FFFFFF;
+                text-transform: uppercase;
+                display: block;
+                margin: 0 auto;
+
+                &:hover {
+                    background-color: #FFFFFF;
+                    color: #000000;
+                }
+            }
+        }
+
+        &:hover {
+            .img-padrao {
+                visibility: hidden;
+                opacity: 0;
+                // display: none;
+            }
+
+            .img-hover {
+                // display: block;
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .overlay {
+                opacity: 1;
+                height: 182px;
+                padding: 16px 30px;
+            }
+        }
+    }
+
+    .slick-produto-01 {
+        .slick-list {
+            .slick-track {
+                .slick-slide {
+
+                    &.card-container {
+                        position: relative;
+
+                        img {
+                            display: block;
+                            width: 100%;
+                            height: auto;
+                            padding-right: 1.5rem;
+                        }
+
+                        .overlay {
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            right: 0;
+                            background-color: #000000;
+                            overflow: hidden;
+                            width: 256px;
+                            height: 0;
+                            transition: height .4s ease;
+                            padding: 0px 30px;
+
+                            @include res-lg {
+                                height: 160px;
+                                padding: 16px 30px;
+                            }
+
+                            .titulo-overlay {
+                                font-family: 'opensans-bold';
+                                color: #FFFFFF;
+                                font-size: 1rem;
+                                line-height: 1.5rem;
+                                margin-bottom: 1rem;
+                            }
+
+                            .btn {
+                                background-color: transparent;
+                                border: 1px solid #FFFFFF;
+                                border-radius: 30px;
+                                width: 190px;
+                                height: 48px;
+                                transition: .3s ease;
+                                color: #FFFFFF;
+                                text-transform: uppercase;
+
+                                &:hover {
+                                    background-color: #FFFFFF;
+                                    color: #000000;
+                                }
+                            }
+
+                            @include res-sm {
+                                display: block;
+                            }
+                        }
+
+                        &:hover {
+
+                            .overlay {
+                                height: 138px;
+                                padding: 16px 30px;
+                            }
+                        }
+                    }
+
+                    // img {
+                    //     padding-right: 1.5rem;
+                    //     width: 256px;
+                    //     height: 384px;
+                    // }
+                }
+            }
+        }
+
+        .slick-dots {
+            bottom: -45px;
+
+            li {
+                button {
+                    &:before {
+                        font-size: 12px;
+                        -webkit-text-stroke-width: 1px;
+                        -webkit-text-stroke-color: #000;
+                        color: transparent;
+                        opacity: 1;
+                    }
+
+                    &:hover {
+                        &::before {
+                            color: #000;
+                            opacity: .7;
+                        }
+                    }
+                }
+
+                &.slick-active {
+                    button {
+                        &:before {
+                            color: #000;
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.modulo-2 {
+    .titulo {
+        margin: 7rem 0 3rem;
+        @include titulo-swashington;
+
+        @include res-sm {
+            margin: 2.5rem 0 .9375rem;
+        }
+
+        &::after,
+        &::before {
+            content: "";
+            position: absolute;
+            background: #0000004D;
+            width: 420px;
+            height: 1px;
+
+            @include res-xl {
+                width: 340px;
+            }
+
+            @include res-lg {
+                width: 230px;
+            }
+
+            @include res-md {
+                width: 150px;
+            }
+
+            @include res-sm {
+                width: 100px;
+            }
+
+            @include res-sm {
+                width: 85px;
+            }
+        }
+
+        &::after {
+            right: 12px;
+        }
+
+        &::before {
+            left: 12px;
+        }
+    }
+
+    .slick-produto-02 {
+        .slick-slide {
+
+            &.card-container {
+                position: relative;
+                margin-right: 10px;
+
+                .img-padrao {
+                    position: absolute;
+                    visibility: visible;
+                    width: 256px;
+                    height: auto;
+                    opacity: 1;
+                    transition: opacity 500ms cubic-bezier(0.420, 0.000, 0.580, 1.000), visibility 600ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
+
+                    @include res-min-1366 {
+                        width: 301px;
+                    }
+
+                    @include res-sm {
+                        display: none;
+                    }
+                }
+
+                .img-hover {
+                    width: 256px;
+                    height: auto;
+                    visibility: hidden;
+                    transition: opacity 500ms cubic-bezier(0.420, 0.000, 0.580, 1.000), visibility 600ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
+        
+                    @include res-sm {
+                        display: block;
+                        visibility: inherit;
+                    }
+
+                    @include res-min-1366 {
+                        width: 301px;
+                    }
+                }
+
+                .overlay {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    background-color: #000000;
+                    overflow: hidden;
+                    width: 256px;
+                    height: 0;
+                    transition: height 400ms cubic-bezier(0.420, 0.000, 0.580, 1.000), opacity 500ms cubic-bezier(0.420, 0.000, 0.580, 1.000), padding 500ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
+                    padding: 0px 30px;
+
+                    @include res-min-1366 {
+                        width: 301px;
+                    }
+
+                    @include res-lg {
+                        height: 138px;
+                        padding: 16px 30px;
+                    }
+
+                    .titulo-overlay {
+                        font-family: 'opensans-bold';
+                        color: #FFFFFF;
+                        font-size: 1rem;
+                        line-height: 1.5rem;
+                        margin-bottom: 1rem;
+                    }
+
+                    .btn {
+                        background-color: transparent;
+                        border: 1px solid #FFFFFF;
+                        border-radius: 30px;
+                        width: 190px;
+                        height: 48px;
+                        transition: .3s ease;
+                        color: #FFFFFF;
+                        text-transform: uppercase;
+                        display: block;
+                        margin: 0 auto;
+
+                        &:hover {
+                            background-color: #FFFFFF;
+                            color: #000000;
+                        }
+                    }
+
+                    @include res-sm {
+                        display: block;
+                    }
+                }
+
+                &:hover {
+
+                    .img-padrao {
+                        visibility: hidden;
+                        opacity: 0;
+                    }
+        
+                    .img-hover {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+
+                    .overlay {
+                        height: 138px;
+                        padding: 16px 30px;
+                    }
+                }
+            }
+
+        }
+
+        .slick-dots {
+            bottom: -45px;
+
+            li {
+                button {
+                    &:before {
+                        font-size: 12px;
+                        -webkit-text-stroke-width: 1px;
+                        -webkit-text-stroke-color: #000;
+                        color: transparent;
+                        opacity: 1;
+                    }
+
+                    &:hover {
+                        &::before {
+                            color: #000;
+                            opacity: .7;
+                        }
+                    }
+                }
+
+                &.slick-active {
+                    button {
+                        &:before {
+                            color: #000;
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+
+        .slick-prev,
+        .slick-next {
+            width: 56px;
+            height: 56px;
+            border: 1px solid #000;
+            border-radius: 50%;
+            transition: all ease .3s;
+
+        }
+
+        .slick-prev {
+            left: -65px;
+
+            &::before {
+                content: url(../img/modulo-2/prev.svg);
+                width: 40px;
+                height: 40px;
+                transition: all ease .3s;
+                opacity: 1;
+            }
+
+            &:hover {
+                background-color: #000;
+                transition: all ease .3s;
+
+                &::before {
+                    filter: invert(1);
+                    transition: all ease .3s;
+                }
+            }
+        }
+
+        .slick-next {
+            right: -45px;
+
+            &::before {
+                content: url(../img/modulo-2/next.svg);
+                width: 40px;
+                height: 40px;
+                transition: all ease .3s;
+                opacity: 1;
+            }
+
+            &:hover {
+                background-color: #000;
+                transition: all ease .3s;
+
+                &::before {
+                    filter: invert(1);
+                    transition: all ease .3s;
+                }
+            }
+        }
+    }
+}
+
+.modulo-3 {
+    margin-top: 7rem;
+    background: #FED224;
+
+    .bg {
+        background-color: #FED224;
+        height: 100%;
+    }
+
+    .box {
+        padding-top: 5.3125rem;
+        padding-bottom: 7.5rem;
+
+        @include res-sm {
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem
+        }
+
+        .titulo {
+            @include titulo-swashington;
+        }
+
+        .conteudo {
+            @media screen and (min-width: 1400px) {
+                width: 70%;
+            }
+
+            p {
+                line-height: 1.5rem;
+            }
+        }
+
+        .btn {
+            @include btn;
+            width: 275px;
+            height: 54px;
+        }
+    }
+
+    .box-img {
+        img {
+
+            @include res-sm {
+                height: auto;
+                max-height: unset;
+                width: 100%;
+            }
+        }
+    }
+}
+
+.modulo-4 {
+    .titulo {
+        margin: 7rem 0 3rem;
+        @include titulo-swashington;
+
+        @include res-sm {
+            margin: 2.5rem 0 .9375rem;
+        }
+
+        &::after,
+        &::before {
+            content: "";
+            position: absolute;
+            background: #0000004D;
+            width: 345px;
+            height: 1px;
+
+            @include res-xl {
+                width: 250px;
+            }
+
+            @include res-lg {
+                width: 140px;
+            }
+
+            @include res-md {
+                width: 60px;
+            }
+
+            @include res-sm {
+                width: 27px;
+            }
+        }
+
+        &::after {
+            right: 12px;
+        }
+
+        &::before {
+            left: 12px;
+        }
+    }
+
+    .slick-posts {
+        @include res-sm {
+            padding-left: 1rem;
+        }
+
+        .slick-list {
+            .slick-track {
+                .slick-slide {
+                    padding-right: 1.5rem;
+                }
+            }
+        }
+    }
+
+    .post {
+        @include res-sm {
+            max-width: 252px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .meta {
+            font-size: .875rem;
+            color: #000000B3;
+            line-height: 1.5rem;
+
+            .autor {
+                color: #E1B56C;
+            }
+        }
+
+        .titulo-post {
+            font-family: 'opensans-bold';
+            height: 50px;
+            font-size: 1.25rem;
+            line-height: 1.5rem;
+            color: #000;
+
+            @include res-sm {
+                font-size: 1.125rem;
+            }
+        }
+
+        .post-img {
+            img {
+                @include res-min-1366 {
+                    width: 100%;
+                }
+            }
+        }
+
+        .post-resumo {
+            width: 80%;
+            color: #000000B3;
+            line-height: 1.5rem;
+            font-size: 1rem;
+
+            @include res-sm {
+                width: 100%;
+                font-size: .875rem;
+            }
+
+            @include res-min-1366 {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.modulo-18 {
+    .nav {
+        margin-top: 4.5rem;
+        border: 1px solid #0000004b;
+        border-radius: 34px;
+        padding: 1rem;
+        width: 715px;
+
+        .nav-item {
+            .nav-link {
+                color: #000000;
+                font-size: 1rem;
+                line-height: 1.5rem;
+                padding: 0;
+                margin: 0 20px;
+
+                &.ativo {
+                    color: #E1B56C;
+                    border-bottom: 1px solid #E1B56C;
+                    transition: all ease .2s;
+                }
+            }
+        }
+
+        &.mobile {
+            border: none;
+            flex-wrap: nowrap;
+            overflow: scroll;
+
+            .nav-item {
+                margin: 0 14px;
+
+                .nav-link {
+                    color: #000000;
+                    font-size: 1rem;
+                    line-height: 1.5rem;
+                    padding: 0;
+                    width: max-content;
+                    margin: unset;
+
+                    &.ativo {
+                        color: #FFFFFF;
+                        border-bottom: none;
+                        background-color: #E1B56C;
+                        border-radius: 20px;
+                        padding: 6px 16px;
+                        transition: background ease .1s;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.modulo-19 {
+    .post {
+        margin-top: 2rem;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid #0000004D;
+
+        @include res-lg {
+            margin-top: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #0000004D;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .meta {
+            font-size: .875rem;
+            color: #000000B3;
+            line-height: 1.5rem;
+
+            .autor {
+                color: #E1B56C;
+            }
+        }
+
+        .titulo-post {
+            font-family: 'opensans-bold';
+            font-size: 1.25rem;
+            line-height: 1.5rem;
+            color: #000;
+            height: 50px;
+
+            @include res-sm {
+                font-size: 1.125rem;
+            }
+        }
+
+        .post-resumo {
+            color: #000000B3;
+            line-height: 1.5rem;
+            font-size: 1rem;
+            width: 95%;
+
+            @include res-sm {
+                font-size: .875rem;
+            }
+        }
+    }
+
+    .btn {
+        @include btn;
+        width: 207px;
+        height: 40px;
+        margin-top: 40px;
+        font-size: .875rem;
+    }
+}
+
+.btn-whatsapp {
+    position: fixed;
+    bottom: 50px;
+    right: 34px;
+    width: 56px;
+    z-index: 10;
+}

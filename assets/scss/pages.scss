@@ -1,0 +1,133 @@
+#blog,
+#contato,
+#quemsomos,
+#single {
+    .menu {
+        .navbar {
+            .navbar-brand {
+                display: none;
+
+                &.preto {
+                    display: block;
+                }
+            }
+
+            .navbar-toggler {
+                .navbar-toggler-icon {
+                    filter: invert(1);
+                }
+            }
+
+            &.sidenav {
+                .navbar-toggler {
+                    .navbar-toggler-icon {
+                        filter: invert(0);
+                    }
+                }
+            }
+
+            .navbar-collapse .navbar-nav .nav-item {
+                .nav-link {
+                    color: #000
+                }
+
+                &.dropdown .dropdown-menu li .dropdown-item {
+                    color: #000
+                }
+            }
+        }
+        &.ativo {
+            .navbar-toggler {
+                .navbar-toggler-icon {
+                    filter: invert(0);
+                }
+            }
+        }
+    }
+
+}
+
+#quemsomos {
+    .menu {
+        .mainnav {
+            .navbar-collapse {
+                .navbar-nav {
+                    .nav-item {
+                        #link-quemsomos {
+                            color: #E1B56C !important;
+                            border-bottom: 1px solid #E1B56C;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#produtos {
+    .menu {
+        .mainnav {
+            .navbar-collapse {
+                .navbar-nav {
+                    .nav-item {
+                        #link-produtos {
+                            color: #E1B56C !important;
+                            border-bottom: 1px solid #E1B56C;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#harmonizacao {
+    .menu {
+        .mainnav {
+            .navbar-collapse {
+                .navbar-nav {
+                    .nav-item {
+                        #link-harmonizacao {
+                            color: #E1B56C !important;
+                            border-bottom: 1px solid #E1B56C;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#blog {
+    .menu {
+        .mainnav {
+            .navbar-collapse {
+                .navbar-nav {
+                    .nav-item {
+                        #link-magazine {
+                            color: #E1B56C !important;
+                            border-bottom: 1px solid #E1B56C;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#contato {
+    .menu {
+        .mainnav {
+            .navbar-collapse {
+                .navbar-nav {
+                    .nav-item {
+                        #link-faleconosco {
+                            color: #E1B56C !important;
+                            border-bottom: 1px solid #E1B56C;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

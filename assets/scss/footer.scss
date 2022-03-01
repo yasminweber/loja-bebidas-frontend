@@ -1,0 +1,117 @@
+.rodape {
+    margin-top: 7rem;
+    background-color: #EE205A;
+    color: #fff;
+
+    @include res-lg {
+        margin-top: 2.5rem;
+    }
+
+    .titulo {
+        margin-top: 3rem;
+        @include titulo-swashington;
+        color: #FFF;
+    }
+
+    .conteudo {
+        width: 61%;
+        margin: 0 auto;
+
+        @include res-sm {
+            width: 100%;
+            margin: unset;
+        }
+    }
+
+    form {
+        width: 74%;
+        height: 3rem;
+        margin: 0 auto;
+        border: 1px solid #FFF;
+        padding: .8125rem 2rem;
+        position: relative;
+        border-radius: 1.5rem;
+
+        @include res-sm {
+            width: 100%;
+            margin: unset;
+        }
+
+
+        .form-control {
+            background-color: transparent;
+            color: #fff;
+            border: none;
+            padding: 0;
+            line-height: 1.375rem;
+
+            &::placeholder {
+                color: #FFF;
+            }
+        }
+
+        .btn {
+            color: #FFF;
+            padding: 0;
+            line-height: 1.375rem;
+
+            &::before {
+                content: '';
+                height: 47px;
+                width: 1px;
+                right: 120px;
+                position: absolute;
+                top: 0;
+                background-color: #fff;
+
+                @include res-sm {
+                    right: 105px;
+                }
+            }
+
+            &.subscribe {
+                margin-top: -5px;
+            }
+        }
+    }
+
+    .info {
+        a {
+            font-size: 1rem;
+
+            @include res-sm {
+                font-size: .875rem;
+            }
+        }
+    }
+
+    .endereco {
+        font-size: 1rem;
+
+        @include res-sm {
+            font-size: .875rem;
+        }
+    }
+
+    .copy {
+        opacity: .5;
+        margin-bottom: 5rem;
+
+        font-size: 1rem;
+
+        @include res-sm {
+            font-size: .875rem;
+            opacity: 1;
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: #FFF;
+        font-size: 1rem;
+
+        @include res-sm {
+            font-size: .875rem;
+        }
+    }
+}
